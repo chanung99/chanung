@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hogall</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+    <script type="text/javascript" src="popoljs.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="popolcss.css"/>
+</head>
+<body>
+    <div id="main">
+
+        <header id="header">
+            <div class="full_container">
+                <div class="header_container">
+                    <h1><a href="#">찬웅</a></h1>
+                    <nav class="header_gnb">
+                        <ul class="gnb">
+                            <li><a onclick="home()">Home</a></li>
+                            <li><a onclick="about()">About</a></li>
+                            <li><a onclick="project()">Project</a></li>
+                            <li><a onclick="um()">um..</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+
+            </div>
+
+        </header>
+
+        <div id="main_homeContainer">
+            <section id="home_section">
+                <div class="home_container">
+                    <div class="home_type">
+                        <span class="typing_wrap">
+                            <span id="textType"></span>
+
+
+                    </div>
+            </section>
+        </div>
+
+
+        <div class="hogallContainer">
+            <section class="hogallSection">
+                <div class="title">
+                    <h1>HOGALL 포트폴리오</h1>
+                </div>
+
+                <div class="goHogall">
+                    <button type="button" onclick="goHogall()">정적 사이트 보기</button>
+                </div>
+
+                <div class="projectEx">
+                    <ul>
+                        <li>프로젝트명 : hogall</li>
+                        <li>수행기간 : 2019-06-20 ~ 2019-09-17</li>
+                        <li>개발목표 : 중고로 물건을 판매할때 물건의 가격을 책정할 때 너무높게 책정하면 판매가 되지 않고 낮게 책정하면 손해본듯한 느낌이 드는데 그것을 해결할 수 있게 경매 시스템을 사용한다.</li>
+                        <li>개발환경 : STS, SQLdeveloper</li>
+                        <li>[ Front ] - HTML, CSS, JavaScript, EL, JSTL, AJAX  </li>
+                        <li>[ Back ] - Java, Jsp / Servlet</li>
+                        <li>[ Server ] - Tomcat 8.5 Version</li>
+                        <li>참여도 : 100%</li>
+                        <li>기여도 : 100%</li>
+                    </ul>
+
+                    <div class="erd">
+                        <h3>ERD</h3>
+                        <img src="pofoll/hogllErd.PNG"/>
+                    </div>
+                </div>
+
+                <div class="imageOne imageBox">
+                    <img src="pofoll/1.PNG">
+                    <div class="imageEx">
+                        <ul>
+                            <li>[1] 로그인은 사용자가 입력한 값을 DB에서 비교해 일치하면 session에 사용자 정보를 저장한다. 
+                                비교할 땐 사용자가 입력한 값과 암호화처리돼 저장된 비밀번호와 비교해주는 BCrypt를 사용한다.</li>
+                            <li>[2] 검색을 할수있다.
+                                입력을 할때마다 ajax가 발동돼 일치하는 단어가 있는 상품을 찾아준다</li>
+                            <li>[3] 인기있는 경매물품은 조회수 순으로 정렬한다.</li>
+                            
+                            <li><button type="button" onclick="goHogall()">보기</button></li>
+                        </ul>
+
+                        
+                       
+                    </div>
+                   
+                </div>
+
+                <div class="imageOne imageBox">
+                    <img src="pofoll/2.PNG">
+                    <div class="imageEx">
+                        <ul>
+                            <li>회원가입을 할 수 있다.</li>
+                            <li>사용자한테 입력받은 정보를 받아 DB에 저장한다.</li>
+                            <li>[1] 아이디는 입력할때마다 Ajax 이용해 중복이 되는 아이디가 있는지 검사함</li>
+                            <li>[2] 비밀번호는 정규식 처리를 해 영문,숫자 조합의 8~20자 내외로만 입력 가능하게 한다. 
+                                전송 할 때 비밀번호는 암호화 처리해서 DB에 저장한다</li>
+                            <li>[3] JavaMailSender이용해 설정에둔 발신자로 사용자가 입력한 이메일로 인증번호를 발송한다.</li>
+                            <li>[4] 다음 우편번호 서비스 api를 이용해서 우편번호,주소를 입력하게 함.</li>
+                            <li><button type="button" onclick="goEnroll()">보기</button></li>
+                        </ul>
+
+                      
+                    </div>
+                </div>
+
+                <div class="imageOne imageBox">
+                    <img src="pofoll/3.PNG">
+                    <div class="imageEx">
+                        <ul>
+                            <li>[1] 상품을 등록할 수 있음 이미지는 최대 15장 업로드 할 수 있음 </li>
+                            <li>[2] 즉시구매여부를 결정할 수 있고</li>
+                            <li>[3] 안전거래를 체크하면 낙찰시 가격이 증가되는데 그 비용을 누가 부담하는지 정할 수 있음</li>
+                            <li><button type="button" onclick="goenrollproduct()">보기</button></li>
+                        </ul>
+
+                      
+                    </div>
+                </div>
+
+                <div class="imageOne imageBox">
+                    <img src="pofoll/4.PNG">
+                    <div class="imageEx">
+                        <ul>
+                            <li>[1] 상품등록페이지에서 업로드한 사진은 슬라이드 형식으로 볼 수 있음</li>
+                            <li>[2] 입찰자 목록은 modal창 형식으로 볼 수 있음</li>
+                            <li>[3] 입찰하기를 누르면 현재 경매가에 입찰단위를 더해 입찰이됨.</li>
+                            
+                            <li>[4] 댓글과 답글을 작성할수 있음.</li>
+                            <li><button type="button" onclick="epchal()">보기</button></li>
+                        </ul>
+
+                      
+                    </div>
+                </div>
+
+                <div class="imageOne imageBox">
+                    <img src="pofoll/5.png">
+                    <div class="imageEx">
+                        <ul>
+                            <li>마이페이지에선 자신의 관심 카테고리를 등록,삭제를 할 수 있고 
+                                자신이 입찰한 모든 경매, 낙찰된 경매를 볼 수 있음</li>
+                            <li>그리고 자신의 회원정보 변경을 할 수 있음</li>
+                            <li><button type="button" onclick="my()">보기</button></li>
+                            
+                        </ul>
+
+                      
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        function goHogall(){
+            location.href="hogallmain.html";
+        }
+        function goEnroll(){
+            location.href="hogallEnroll.html";
+        }
+        function goenrollproduct(){
+            location.href="enrollproduct.html";
+        }
+        function epchal(){
+            location.href="productinfor.html";
+        }
+        
+
+    </script>
+</body>
+</html>

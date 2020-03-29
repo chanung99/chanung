@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="hogallcss.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <style>
+        header.enroll_header{
+            background-color: #171792;
+        }
+        header.enroll_header div.enroll_head{
+            height: 90px;
+            width: 890px;
+            position:relative;
+            margin: 0 auto;
+            
+        }
+        h1.enroll_logo a{
+            float:left;
+            display: block;
+        }
+        h1.enroll_logo{
+            position:absolute;
+            overflow: hidden;
+            left: 0;
+        }
+        h1.enroll_logo a.hogallImg img{
+            width: 200px;
+        }
+        h1.enroll_logo a.enrollImg img{
+            width: 100px;
+        }
+        h1.enroll_logo a.enrollImg{
+            padding: 12px;
+            
+        }
+        h1.enroll_logo{
+            margin:0;
+            top:30px;
+        }
+        nav.main_lnb{
+            position:absolute;
+            right: 0;
+            bottom: 0;
+            
+        }
+        nav.main_lnb > ul {
+            overflow: hidden;
+        }
+        nav.main_lnb > ul > li{
+            float:left;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        
+        nav.main_lnb ul li:nth-child(n+2) a::before {
+        content: "|";
+        }
+        
+        div#main{
+            width: 880px;
+            margin : 0 auto;
+        }
+        
+        div#main div#enroll_content div.content_head h3{
+            color : #3a3d42;
+        }
+        div#main div#enroll_content div.content_head{
+            height: 31px;
+            border-bottom: 2px solid #000000;
+        }
+        div#main div#enroll_content div.content_box{
+            min-height: 400px;
+            border: 1px #cecdce solid;
+            border-radius: 5px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        div#enroll_content div.conForm_box{
+            margin: 0 auto;
+        }
+        div#enroll_content div.conForm_box{
+            width: 700px;
+            padding-top: 50px;
+            margin: 0 auto;
+        }
+        div#enroll_content .form_text,.form_content{
+            float:left;
+        }
+        div#enroll_content .form_text{
+            width: 180px;
+            height: 40px;
+            line-height: 40px;
+        }
+        div#enroll_content .form_content{
+            width: 500px;
+        }
+        div#enroll_content .fg{
+            margin-top: 15px;
+        }
+        div#enroll_content .fg:first-child{
+            margin-top: 0px;
+        }
+        
+        div#enroll_content .fg::after {
+            clear: both;
+            display: block;
+            visibility: hidden;
+            content: "";
+        }
+        div#enroll_content .form_content input[type=text],div#enroll_content .form_content input[type=password],div#enroll_content .form_content input[type=email]{
+            width: 100%;
+            
+        }
+        
+        div#enroll_content .int{
+            float : left;
+        }
+        
+        
+        div#enroll_content .emailGo_box{
+            float: left;
+            margin-left : 10px;
+        }
+        div#enroll_content .next_box{
+            margin-top:20px;
+            text-align: right;
+        }
+        .hidden{
+            display: none;
+            
+        }
+        .addSearch_box{
+            float: left;
+            margin-left: 10px;
+        }
+        .must{
+            color: #F2CB61;
+        }
+        .visi{
+            visibility: hidden;
+        }
+        
+    </style>
+    </head>
+    <body>
+        <div>
+            <header id="main-header">
+                <div class="gall-header">
+                   <!-- <div id="title">
+                        <h1><a href="${pageContext.request.contextPath }" id="logo-title"><img src="img/hogall.png"/></a></h1>
+                     </div> -->
+          
+          
+                   <div class="topNav_box">
+                      <div class="navboxWrap">
+                         <div class="top_subject">
+                            <a href="hogallmain.html">
+                               <h1>HOGALL</h1>
+                            </a>
+                         </div>
+                         <nav class="top_nav">
+                            <div id="logged_container">
+                               <div class="options fl">
+          
+                                  <a id="enroll" href="hogallEnroll.html">회원가입 </a><span id="nanum">|</span>
+                                  <a id="idpwSearch" href="#">아이디 / 비밀번호 찾기</a>
+          
+          
+                               </div>
+          
+                               <div id="login_box" class="fl">
+                                  <form class="login_form" name="loginForm"
+                                     action="${pageContext.request.contextPath }/member/login.do" method="post">
+                                     <div class="userText_box fl">
+                                        <div class="loginput_box fl">
+                                           <input type="text" id="user_id" name="memberId" />
+                                        </div>
+                                        <div class="loginput_box fl">
+                                           <input type="password" id="user_pw" name="password" />
+                                        </div>
+                                     </div>
+                                     <div class="login_set fl">
+                                        <div class="check_id fl">
+                                           <span class="checkbox_span">
+                                              <input type="checkbox" class="form-check-input" id="idsave" />
+                                              <label for="idsave">ID 저장</label>
+                                           </span>
+                                        </div>
+                                        <button type="submit" class="loginBtn">로그인</button>
+                                     </div>
+                                  </form>
+          
+                               </div>
+          
+          
+                            </div>
+                         </nav>
+                      </div>
+                   </div>
+          
+                   <div class="gnb_bar">
+                      <nav class="main-nav">
+                         <div class="categoryLayer">
+                            <a href="#">갤러리</a>
+                            <div class="dropdown">
+                               <div class="allMenu">
+                                  <ul>
+                                     <li><a href="sportslist.html" id="sporting goods" class="category">스포츠 용품★</a></li><!-- 클릭하면 컨트롤러로 연결  -->
+                                     <li><a id="clothing" class="category">의류</a></li>
+                                     <li><a id="shoes" class="category">신발</a></li>
+                                     <li><a id="electronics" class="category">전자제품</a></li>
+                                     <li><a class="category">게임장비</a></li>
+                                     <li><a class="category">게임물품</a></li>
+                                     <li><a class="category">식품</a></li>
+                                     <li><a class="category">가구,인테리어</a></li>
+                                     <li><a class="category">카메라</a></li>
+                                     <li><a class="category">컵,그릇</a></li>
+                                     <li><a class="category">주류</a></li>
+                                     <li><a class="category">악기</a></li>
+                                     <li><a class="category">미술품</a></li>
+                                     <li><a class="category">피규어</a></li>
+                                  </ul>
+                               </div>
+          
+                            </div>
+                         </div>
+          
+                         <ul class="top_menu">
+          
+                            <li></li>
+                            <li><a href="#">상점</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">마이페이지</a></li>
+                            <li><a href="#">로그인</a></li>
+                         </ul>
+                         <div id="search-bar">
+          
+                            <input type="text" id="search" placeholder="검색" />
+                            <!-- <button type="button" id="search-button"></button> -->
+          
+                            <div id="search_result">
+          
+                            </div>
+                         </div>
+                      </nav>
+                   </div>
+          
+          
+                </div>
+             </header>
+        
+             <div id="betweenEnroll">
+               
+             </div>
+
+
+            <div id="main">
+                <form id="enrollForm" onsubmit="return frnSubmit();" action="${pageContext.request.contextPath }/member/signUp.do" name="enrollForm" method="post">
+                    <div id="enroll_content">
+                        <article>
+                            <section>
+                                <div class="content_head">
+                                    <h3>회원 정보 입력</h3>
+                                </div>
+                                
+                                <div class="content_box">
+                                    <span class="must" style="float: right;">*표시는 반든시 입력해야 하는 항목 입니다.</span>
+                                    <div class="conForm_box">
+                                        <div class="id_group fg"><span class="must" style="float: left;">*</span>
+                                            <div class="form_text">아이디</div>
+                                            <div class="form_content">
+                                                <input min="5" maxlength="20" type="text" name="id" class="int" id="id_form"/>
+                                                <div class="tip_msgbox">
+                                                    <p class="tip_msg id_msg">5~20자 영문,숫자만 입력해주세요</p>
+                                                    <p class="id_ok"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pw_group fg"><span class="must" style="float: left;">*</span>
+                                            <div class="form_text">비밀번호</div>
+                                            <div class="form_content">
+                                                <input type="password" name="password" class="int" id="pw_form"/>
+                                                <div class="tip_msgbox">
+                                                    <p class="tip_msg pw_msg">영문,숫자조합 8~20자 입력해주세요 (특수문자 사용가능)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pwCheck_group fg"><span class="must" style="float: left;">*</span>
+                                            <div class="form_text">비밀번호 확인</div>
+                                            <div class="form_content">
+                                                <input type="password" id="pwCheck" class="int pwCheck"/>
+                                                <div class="tip_msgbox">
+                                                    <p class="tip_msg pwCk_msg"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="name_group fg"><span class="must" style="float: left;">*</span>
+                                            <div class="form_text">이름</div>
+                                            <div class="form_content">
+                                                <input type="text" class="int" name="name" id="name"/>
+                                            </div>
+                                        </div>
+                                        <div class="nickName_group fg"><span class="must" style="float: left;">*</span>
+                                            <div class="form_text">닉네임</div>
+                                            <div class="form_content">
+                                                <input type="text" class="int" name="nickName" id="nickName"/>
+                                                
+                                                <div class="tip_msgbox">
+                                                        <p class="tip_msg nick_msg">2~10자 닉네임 입력해주세요</p>
+                                                        <p class="nick_ok"></p>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="email_group fg"><span class="must" style="float: left;">*</span>
+                                            <div class="form_text">이메일</div>
+                                            <div class="form_content">
+                                                <input style="width: 350px;" name="email" type="text" class="int" id="email"/>
+                                                <div class="emailGo_box">
+                                                    <button class="emailGo_Btn" onclick="emailGo()" type="button">인증번호 전송</button>
+                                                </div>
+                                            </div>
+                                            <div class="tip_msgbox">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="cerNum_group fg hidden"><span class="must" style="float: left;">*</span>
+                                            <div class="form_text">인증번호</div>
+                                            <div class="form_content">
+                                                <input style="width: 350px;" type="text" class="int" id="cerNum"/>
+                                                <input type="hidden" value="${number }" id="ckNumber"/>
+                                                <div class="emailGo_box">
+                                                    <button class="emailGo_Btn" onclick="numSame()" type="button">인증번호 확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="zipCode_group fg"><span class="must visi" style="float: left;">*</span>
+                                            <div class="form_text">우편번호</div>
+                                            <div class="form_content">
+                                                <input type="text" style="background-color: #CFCFCF;" class="int" name="zipCode" id="sample4_postcode" readonly="readonly"/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="address_group fg"><span class="must visi" style="float: left;">*</span>
+                                            <div class="form_text">주소</div>
+                                            <div class="form_content">
+                                                <input type="text" style="background-color: #CFCFCF;" class="int" name="address" id="sample4_roadAddress" readonly="readonly"/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="detailAddress_group fg"><span class="must visi" style="float: left;">*</span>
+                                            <div class="form_text">상세주소</div>
+                                            <div class="form_content">
+                                                <input style="width: 350px;" type="text" class="int" name="detailAddress" id="sample4_detailAddress"/>
+                                                <div class="addSearch_box">
+                                                    <button class="addSearch_Btn" onclick="sample4_execDaumPostcode()" value="우편번호 찾기" type="button">우편번호 찾기</button>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                    <div class="next_box">
+                                            <div class="next_content">
+                                                <button type="submit">다음</button>
+                                            </div>
+                                        </div>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+                </form>
+            </div>
+            
+        </div>	
+
+
+        <footer>
+            <p>Copyright ⓒ 2019 hogall. All rights reserved.</p>
+      
+        </footer>
+
+        <script>
+            $(".category").click(function(){
+               location.href="sportslist.html";
+            })
+         
+            $(".product_wrap").click(function(){
+                  location.href="productinfor.html";
+               })
+         
+             $(function(){
+               
+         
+         
+               $(".categoryLayer").mouseover(function(){
+                  $(".dropdown").css("display","block");
+                });
+         
+                $(".categoryLayer").mouseout(function(){
+                   $(".dropdown").css("display","none");
+                });
+             })
+         
+         </script>
+</body>
+</html>

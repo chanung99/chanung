@@ -1,0 +1,393 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 500px;
+    
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div#main {
+    position: relative;
+}
+
+div.full_container {
+    margin: 0 auto;
+
+}
+
+header#header {
+    padding: 10px 0px;
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 12px #333;
+    /* background-size: cover;
+    background-image: url(pen.jpg);
+    height: 937px; */
+    /* transition: all 3s ease-in-out; */
+
+}
+
+div.header_container {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1260px;
+
+
+}
+
+div.header_container nav * {
+    color: black;
+}
+
+div.header_container>h1 {
+    float: left;
+
+}
+
+div.header_container h1 a {
+    color: #364135;
+
+}
+
+
+ul.gnb {
+    list-style: none;
+}
+
+ul.gnb li {
+    float: left;
+
+
+}
+
+ul.gnb li a {
+    font-size: 24px;
+    padding: 10px 20px;
+
+}
+
+/* ul.gnb li a:hover {
+    color: #364135;
+
+} */
+
+nav.header_gnb {
+    float: right;
+}
+
+section#home_section {
+    height: 920px;
+    background-image: url("img/pen.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#main_homeContainer {
+
+    position: relative;
+}
+
+.home_type {}
+
+.home_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+}
+
+#textType {
+    font-size: 55px;
+}
+
+i {
+    font-size: 300px;
+}
+
+.typing_wrap #textType {
+    color: #ffffff;
+
+}
+
+div#about_container {
+    position: relative;
+    background-color: #EEEFEE
+    ;
+
+}
+
+.about_header {
+    text-align: center;
+
+}
+
+section#about_section {
+    margin: 0 auto;
+    width: 1160px;
+    
+
+}
+.profile_content img{
+    float: left;
+   
+}
+.profile_content ul{
+    float: left;
+}
+
+ul{
+    list-style: none;
+
+}
+ul li {
+    padding: 5px 0px;
+}
+.profile_content ul li:nth-child(1){
+    font-size: 19px;
+}
+
+.my_profile{
+    float: left;
+    width: 60%;
+
+}
+
+li img{
+    width: 50px;
+}
+.skill_content ul li {
+    position: relative;
+}
+ul li div{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+ul li span{
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+}
+#java_div{
+    background-image: url(java.png);
+    background-size: cover;
+
+}
+.about_header{
+    padding: 30px 0px;
+}
+.about_me{
+    width: 40%;
+}
+
+.about_me{
+    float: left;
+    width: 40%;
+}
+.about_me{
+    position: relative;
+}
+.me_content{
+    /* position: absolute;
+    top: 85px; */
+}
+.about_content::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.skill_container{
+    position: relative;
+    padding: 60px 0;
+    background-color: #EEEFEE;
+}
+.skill_container::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.skill_section{
+    margin: 0 auto;
+    width: 1160px;
+}
+.skill_header{
+    
+}
+dd{
+    float: left;
+  
+}
+#html{
+    background-image: url("img/html2.png");
+    
+}
+#css{
+    background-image:url("img/css.png");
+    
+}
+#js{
+    background-image:url("img/js.png");
+    
+}
+#jquery{
+    background-image:url("img/jquery.png");
+    
+}
+#java{
+    background-image:url("img/java.png");
+}
+#oracle{
+    background-image: url("img/oracle-icon.png");
+}
+#spring{
+    background-image: url("img/spring.png");
+}
+#window{
+    background-image: url("img/window.png");
+}
+.icon{
+    background-size: cover;
+    width: 62px;
+    height: 62px;
+    
+}
+.skill_image{
+    background-color: #ffffff;
+    margin-right:10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+}
+.skill_content ul li{
+    float: left;
+    font-weight: bold;
+}
+
+.skill_content ul {
+    padding: 0;
+}
+.skill_content ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.skill_content ul li p {
+    font-size: 14px;
+    margin:0 10px 0 0;
+    text-align: center;
+}
+#prodjct_container{
+    position: relative;
+}
+#project_section{
+    margin: 0 auto;
+    width: 1160px;
+}
+.project_header{
+    text-align: center;
+    padding: 30px 0;
+}
+.proejct_imageWrap{
+    float: left;
+}
+.project_image{
+    
+    width: 610px;
+    height: 303.2px;
+    border: 2.5px solid black;
+}
+.project_exp{
+    float: right;
+    width: 40%;
+}
+.project_exp>h1{
+    font-size: 29px;
+}
+.project_exp ul {
+    padding-left: 0;
+}
+.project{
+    margin-bottom: 110px;
+}
+.project::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.proejct_view{
+    float: right;
+}
+
+
+.project_image{
+    overflow: hidden;
+}
+
+
+
+
+
+/* hogall.html */
+
+.hogallContainer{
+    position: relative;    
+}
+.hogallSection{
+    width: 1260px;
+    margin: 0 auto;
+}
+.imageBox{
+    width: 100%;
+    padding: 30px 0;
+}
+.imageBox::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.imageBox img{
+    width: 50%;
+    float: left;
+}
+.imageEx{
+    float: left;
+    width: 40%;
+}
+.title{
+    text-align: center;
+    padding: 30px 0;
+}
+.erd{
+    width: 100%;
+    text-align: center;
+}
+
+.erd img{
+    width: 80%;
+    
+
+}
+.projectEx{
+    padding: 30px 0;
+    
+}
+
+.goHogall{
+    text-align: center;
+}
+
+.imageEx button{
+    float: right;
+}
