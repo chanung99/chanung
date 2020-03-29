@@ -1,10 +1,5 @@
 
-        $(window).scroll(function() { 
-            
-            var scrollValue = $(document).scrollTop(); 
-            
         
-        });
 
         
         $(function () {
