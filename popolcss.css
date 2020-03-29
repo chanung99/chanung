@@ -223,15 +223,20 @@ ul li span{
     margin: 0 auto;
     width: 1160px;
 }
-.skill_header{
-    
-}
+
 dd{
     float: left;
   
 }
+footer{
+    background-clip: content-box; clear: both; height: 95px; text-align: center;
+ }
+ footer p {
+    margin-top: 30px;
+ }
+
 #html{
-    background-image: url("img/HTML2.png");
+    background-image: url("img/html.png");
     
 }
 #css{
