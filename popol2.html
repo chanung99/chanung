@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script
+        src="https://www.cssscript.com/demo/simple-typewriter-effect-pure-javascript-typewriterjs/typewriter.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+
+
+
+
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-bottom: 5000px;
+    }
+
+    a {
+        text-decoration: none;
+
+    }
+
+    div#main {
+        position: relative;
+    }
+
+    div.full_container {
+        margin: 0 auto;
+
+    }
+
+    header#header {
+        padding: 10px 0px;
+        background-color: #ffffff;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        box-shadow: 0px 1px 12px #333;
+        /* background-size: cover;
+        background-image: url(pen.jpg);
+        height: 937px; */
+        /* transition: all 3s ease-in-out; */
+
+    }
+
+    div.header_container {
+        margin: 0 auto;
+        padding: 0 40px;
+        max-width: 1080px;
+
+
+    }
+
+    div.header_container nav * {
+        color: black;
+    }
+
+    div.header_container>h1 {
+        float: left;
+
+    }
+
+    div.header_container h1 a {
+        color: #364135;
+
+    }
+
+
+    ul.gnb {
+        list-style: none;
+    }
+
+    ul.gnb li {
+        float: left;
+
+
+    }
+
+    ul.gnb li a {
+        font-size: 24px;
+        padding: 10px 20px;
+
+    }
+
+    ul.gnb li a:hover {
+        color: #364135;
+        border-bottom: 2.3px solid #364135;
+        ;
+
+    }
+
+    nav.header_gnb {
+        float: right;
+    }
+
+    section#home_section {
+        height: 920px;
+        background-image: url("pen.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #main_homeContainer {
+
+        position: relative;
+    }
+
+    .home_type {}
+
+    .home_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+
+    }
+
+    #textType {
+        font-size: 55px;
+    }
+
+    i {
+        font-size: 300px;
+    }
+
+    .typing_wrap #textType {
+        color: #ffffff;
+
+    }
+
+    div#about_container {
+        position: relative;
+
+    }
+
+    .about_header {
+        text-align: center;
+
+    }
+
+    section#about_section {
+        margin: 0 auto;
+        width: 1160px;
+
+    }
+    .profile_content img{
+        float: left;
+       
+    }
+    .profile_content ul{
+        float: left;
+    }
+
+    ul{
+        list-style: none;
+
+    }
+    ul li {
+        padding: 5px 0px;
+    }
+    .profile_content ul li:nth-child(1){
+        font-size: 19px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+        <header id="header">
+            <div class="full_container">
+                <div class="header_container">
+                    <h1><a href="#">Chanung</a></h1>
+                    <nav class="header_gnb">
+                        <ul class="gnb">
+                            <li><a href="#1">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">um..</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+
+            </div>
+
+        </header>
+
+        <div id="main_homeContainer">
+            <section id="home_section">
+                <div class="home_container">
+                    <div class="home_type">
+                        <span class="typing_wrap">
+                            <span id="textType"></span>
+
+
+                    </div>
+            </section>
+        </div>
+
+        <div id="about_container">
+            <section id="about_section">
+                <div class="about_header">
+                    <h1>About</h1>
+                </div>
+
+                <div class="about_content">
+                    <div class="my_profile">
+                        <div class="profile_header">
+                            <h1>프로필</h1>
+                        </div>
+                        <div class="profile_content">
+                            <img src="sajin.jpg" width="190px"/>
+
+                            <ul>
+                                <li>왕 찬 웅 </li>
+                                <li>프론트 엔드 개발자 [신입]</li>
+                                <li>1999.04.23</li>
+                                <li>경기도 고양시 일산서구</li>
+                                <li>010-3250-0423</li>
+                                <li>chanung5722005@gmail.com</li>
+                            </ul>
+
+                            <ul>
+                                <li></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <script>
+
+
+
+        $(function () {
+
+            
+
+
+
+            // var typing = document.getElementById('typing');
+
+            // var typewriter = new Typewriter(typing, {
+            //     loop: true
+            // });
+
+            // typewriter.typeString('안녕하세요 안녕하세요 안녕하세요')
+            //     .pauseFor(2500)
+            //     .deleteAll()
+            //     .typeString('Developer 안녕하세요 안녕하세요 안녕하세요 안녕하세요')
+            //     .pauseFor(2500)
+            //     .deleteChars(9)
+            //     .typeString('왕찬웅의 포트폴리오 입니다')
+            //     .start();
+
+
+
+
+
+            var text = document.getElementById("textType");
+
+            var typewriter = new Typewriter(text, {
+                loop: true
+            });
+
+            typewriter.typeString('안녕하세요')
+                .pauseFor(700)
+                .deleteAll()
+                .typeString('Developer')
+                .pauseFor(700)
+                .deleteChars(9)
+                .typeString('왕찬웅의 포트폴리오 입니다.')
+                .pauseFor(2000)
+                .start();
+
+
+
+
+
+
+        })
+
+
+        //새로고침이 스크롤 맨 위로 올림
+        // window.onload =function(){
+        //     setTimeout(function(){
+        //         scrollTo(0,0);
+
+        //     },100);
+
+        // }
+
+
+    </script>
+
+
+</body>
+
+</html>
