@@ -1,7 +1,9 @@
 html{
     scroll-behavior: smooth;
 }
-
+img{
+    vertical-align: middle;
+}
 body {
     font-family: 'Noto Sans KR', sans-serif;
     margin-bottom: 500px;
@@ -49,10 +51,7 @@ div.header_container nav * {
     color: black;
 }
 
-div.header_container>h1 {
-    float: left;
 
-}
 
 div.header_container h1 a {
     color: #364135;
@@ -65,6 +64,7 @@ ul.gnb {
 }
 
 ul.gnb li {
+    
     float: left;
 
 
@@ -135,15 +135,22 @@ div#about_container {
 
 section#about_section {
     margin: 0 auto;
-    width: 1160px;
+    max-width: 1160px;
     
 
 }
+.profile_content::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 .profile_content img{
+    width: 25%;
     float: left;
    
 }
 .profile_content ul{
+    width: 65%;
     float: left;
 }
 
@@ -189,7 +196,7 @@ ul li span{
     padding: 30px 0px;
 }
 .about_me{
-    width: 40%;
+    width: 35%;
 }
 
 .about_me{
@@ -223,20 +230,15 @@ ul li span{
     margin: 0 auto;
     width: 1160px;
 }
-
+.skill_header{
+    
+}
 dd{
     float: left;
   
 }
-footer{
-    background-clip: content-box; clear: both; height: 95px; text-align: center;
- }
- footer p {
-    margin-top: 30px;
- }
-
 #html{
-    background-image:url("img/html.png");
+    background-image: url("img/html.png");
     
 }
 #css{
@@ -298,7 +300,8 @@ footer{
 }
 #project_section{
     margin: 0 auto;
-    width: 1160px;
+    max-width: 1160px;
+    padding: 0 40px;
 }
 .project_header{
     text-align: center;
@@ -308,9 +311,9 @@ footer{
     float: left;
 }
 .project_image{
+    float: left;
+    width: 50%;
     
-    width: 610px;
-    height: 303.2px;
     border: 2.5px solid black;
 }
 .project_exp{
@@ -331,7 +334,7 @@ footer{
     display: block;
     clear: both;
 }
-.proejct_view{
+.project_view{
     float: right;
 }
 
@@ -395,4 +398,117 @@ footer{
 
 .imageEx button{
     float: right;
+}
+.header_container::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+div.header_container>h1 {
+    float: left;
+}
+.about_me ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+footer{
+    background-clip: content-box; clear: both; height: 95px; text-align: center;
+    
+ }
+ footer p {
+    margin-top: 30px;
+ }
+ .bottom{
+    background-color: #f6f6f6;
+ }
+ .contact{
+     text-align: center;
+     max-width: 1160px;
+     
+ }
+
+
+
+
+/* 반응형 웹 */
+
+@media (max-width:768px){
+    #main{
+        font-size: 0.9em;
+    }
+
+    div.header_container h1,div.header_container ul{
+        margin: 0;
+    }
+
+    div.header_container>h1{
+        float: none;
+        text-align: center;
+        
+    }
+    nav.header_gnb{
+        float: none;
+        text-align: center;
+    }
+    ul.gnb li{
+        width: 25%;
+    }
+    /* ul.gnb li a{
+        display: block;
+        line-height: 1;
+    } */
+    .my_profile{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .profile_header h1 {
+        text-align: center;
+    }
+    .profile_content img{
+        float: none;
+    }
+    .profile_content ul{
+        float: none;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+    .about_me{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .skill_content ul{
+        margin: 0 auto;
+        width: 50%;
+    }
+    .skill_content ul li:nth-child(1){
+        margin-left: 39px;
+    }
+    .project_image{
+        float: none;
+        width: 100%;
+    }
+    .project_exp{
+        float: none;
+    }
+    .project_view{
+        float: left;
+    }
+    
+}
+
+
+
+/* 모바일 */
+
+@media (max-width:480px){
+    body{
+        background-color: red;
+    }
 }
