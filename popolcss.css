@@ -508,7 +508,5 @@ footer{
 /* 모바일 */
 
 @media (max-width:480px){
-    body{
-        background-color: red;
-    }
+    
 }
